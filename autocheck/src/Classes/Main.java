@@ -6,5 +6,6 @@ public class Main {
         System.out.println("asdaghf");
         System.out.println("mesaj ca sa vad la mera");
         System.out.println("milu iancu aici");
+        System.out.println("alt mesaj de la milu");
     }
 }
