@@ -10,8 +10,6 @@ public class Main {
 
 
         System.out.println("Mera a fost aici");
-
-
-        System.out.println("noje a scris asta in ora de info");
+        System.out.println("Iancu test");
     }
 }
