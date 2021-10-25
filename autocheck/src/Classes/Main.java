@@ -12,5 +12,18 @@ public class Main {
         System.out.println("Mera a fost aici");
         System.out.println("Iancu test");
         System.out.println("Iancu test2");
+
+
+
+
+
+
+
+
+
+
+
+
+        System.out.println("noje a scris pe linia 27");
     }
 }
