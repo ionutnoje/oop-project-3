@@ -3,17 +3,6 @@ package Classes;
 public class Main {
     public static void main(String[] args) {
 
-        System.out.println("noje a scris asta!");
-        System.out.println("asdaghf");
-
-        System.out.println("Iancu a scris aici.");
-
-        System.out.println("noje a scris asta");
-        System.out.println("noje a scris si asta");
-        System.out.println("alt mesaj");
-        System.out.println("alt mesaj 2 ");
-        System.out.println("la;khfgd");
-
 
     }
 }
