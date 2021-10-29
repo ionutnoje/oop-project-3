@@ -12,6 +12,7 @@ public class Main {
         System.out.println("noje a scris si asta");
         System.out.println("alt mesaj");
         System.out.println("alt mesaj 2 ");
+        System.out.println("la;khfgd");
 
     }
 }
