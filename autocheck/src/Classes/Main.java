@@ -8,7 +8,9 @@ public class Main {
 
         System.out.println("Iancu a scris aici.");
 
-
+        System.out.println("noje a scris asta");
+        System.out.println("noje a scris si asta");
+        System.out.println("alt mesaj");
 
     }
 }
