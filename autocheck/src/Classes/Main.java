@@ -14,5 +14,7 @@ public class Main {
         System.out.println("alt mesaj 2 ");
         System.out.println("la;khfgd");
 
+        int x = 3;
+
     }
 }
