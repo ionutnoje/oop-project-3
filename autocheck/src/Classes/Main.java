@@ -5,19 +5,10 @@ public class Main {
 
         System.out.println("noje a scris asta!");
         System.out.println("asdaghf");
-      
+
+        System.out.println("Iancu a scris aici.");
 
 
-
-
-        System.out.println("noje a scris pe linia 27");
-
-
-        System.out.println("Proiect3");
-
-        System.out.println("Branch");
-
-        System.out.println("xxxxxxxxxxxxxxxxxxxxx");
 
     }
 }
