@@ -1,0 +1,31 @@
+
+Database's structure"
+
++---------------------+
+| Tables_in_autocheck |
++---------------------+
+| cars                |
+| users               |
++---------------------+
+
+
+First table of DB: Users
++------------+-------------+------+-----+---------+----------------+
+| Field      | Type        | Null | Key | Default | Extra          |
++------------+-------------+------+-----+---------+----------------+
+| userid     | int         | NO   | PRI | NULL    | auto_increment |
+| username   | varchar(24) | YES  |     | NULL    |                |
+| password   | varchar(24) | YES  |     | NULL    |                |
+| ismechanic | tinyint(1)  | YES  |     | NULL    |                |
++------------+-------------+------+-----+---------+----------------+
+
+Second table of DB: Cars
++------------+--------------+------+-----+---------+----------------+
+| Field      | Type         | Null | Key | Default | Extra          |
++------------+--------------+------+-----+---------+----------------+
+| carid      | int          | NO   | PRI | NULL    | auto_increment |
+| model      | varchar(24)  | YES  |     | NULL    |                |
+| problem    | varchar(255) | YES  |     | NULL    |                |
+| status     | int          | YES  |     | NULL    |                |
+| customerid | int          | YES  | MUL | NULL    |                |
++------------+--------------+------+-----+---------+----------------+
