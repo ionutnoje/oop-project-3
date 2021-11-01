@@ -9,6 +9,7 @@ Database's structure"
 +---------------------+
 
 
+
 First table of DB: Users
 +------------+-------------+------+-----+---------+----------------+
 | Field      | Type        | Null | Key | Default | Extra          |
