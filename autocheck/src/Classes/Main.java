@@ -2,17 +2,16 @@ package Classes;
 
 import GUI.Welcome;
 
-public class Main extends Thread{
+import java.util.ArrayList;
+
+public class Main {
     public static void main(String[] args) {
+
+        ArrayList<Masini> arrayList_masini = new ArrayList<>();
+
+
 
 
         Welcome welcomeFrame = new Welcome("Login");
-
-        FirstThread firstThread = new FirstThread();
-        SecondThread secondThread = new SecondThread();
-
-        Thread thread1 = new Thread(firstThread);
-        Thread thread2 = new Thread(secondThread);
-
     }
 }

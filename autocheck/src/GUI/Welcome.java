@@ -3,15 +3,20 @@ package GUI;
 import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-public class Welcome {
+public class Welcome implements ActionListener {
 
     private final int WIDTH = 350;
     private final int HEIGHT = 550;
+
+    public String username;
+    public String password;
 
     Font fontBig = new Font("Eras Bold ITC", Font.BOLD, 28);
     Font fontNormal = new Font("Eras Bold ITC", Font.PLAIN, 20);
@@ -23,6 +28,10 @@ public class Welcome {
     Color yellowColor = new Color(233, 196, 106);
     Color labelBg = new Color(244, 162, 97);
     Color buttonBg = new Color(231, 111, 81);
+
+    public JButton submitButton;
+    JTextField usernameInput = new JTextField();
+    JTextField passwordInput = new JTextField();
 
 
     //Empty Constructor
@@ -81,7 +90,6 @@ public class Welcome {
 
 
         //Inputs
-        JTextField usernameInput = new JTextField();
         usernameInput.setBackground(labelBg);
         usernameInput.setForeground(white);
         usernameInput.setHorizontalAlignment(JTextField.CENTER);
@@ -89,7 +97,6 @@ public class Welcome {
         usernameInput.setBounds(60, 200, 200, 35);
         usernameInput.setBorder(null);
 
-        JTextField passwordInput = new JTextField();
         passwordInput.setBackground(labelBg);
         passwordInput.setForeground(white);
         passwordInput.setHorizontalAlignment(JTextField.CENTER);
@@ -97,7 +104,15 @@ public class Welcome {
         passwordInput.setBounds(60, 300, 200, 35);
         passwordInput.setBorder(null);
 
-
+        //Buttons
+        submitButton = new JButton();
+        submitButton.setText("Submit");
+        submitButton.setFont(fontNormal);
+        submitButton.setBackground(buttonBg);
+        submitButton.setForeground(white);
+        submitButton.setBounds(40, 370, 250, 60);
+        submitButton.setFocusable(false);
+        submitButton.addActionListener(this);
 
         //Adding to frame
         frame.add(titleLabel);
@@ -105,6 +120,29 @@ public class Welcome {
         frame.add(passwordLabel);
         frame.add(usernameInput);
         frame.add(passwordInput);
+        frame.add(submitButton);
         frame.setVisible(true);
+    }
+
+
+    //When Submit button is pressed
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        if (e.getSource() == submitButton) {
+            username = usernameInput.getText();
+            password = passwordInput.getText();
+
+            //Check lengths
+            if ((username.length() < 3 || username.length() > 16) && (password.length() < 3 || password.length() > 16)) {
+                System.out.println("Problema.");
+            }
+
+            //If lengths are ok, code inside "else"
+            else{
+                System.out.println("username: " + username);
+                System.out.println("password: " + username);
+            }
+        }
+
     }
 }
