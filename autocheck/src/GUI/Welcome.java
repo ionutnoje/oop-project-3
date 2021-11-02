@@ -1,9 +1,5 @@
 package GUI;
 
-import Classes.ArrayLists;
-import Classes.Masini;
-import net.codejava.JavaMySQL;
-
 import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
@@ -13,12 +9,11 @@ import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.sql.*;
 
 public class Welcome implements ActionListener {
 
-    Connection MyConnection;
-    JavaMySQL javaMySQL = new JavaMySQL();
+    JFrame frame = new JFrame();
+
 
     private final int WIDTH = 350;
     private final int HEIGHT = 550;
@@ -41,6 +36,7 @@ public class Welcome implements ActionListener {
     JTextField usernameInput = new JTextField();
     JTextField passwordInput = new JTextField();
 
+
     //Empty Constructor
     public Welcome() {
 
@@ -48,9 +44,6 @@ public class Welcome implements ActionListener {
 
     //Main Constructor
     public Welcome(String title) {
-
-        JFrame frame = new JFrame();
-
         //GUI Icon
         URL url = null;
         try {
@@ -145,21 +138,13 @@ public class Welcome implements ActionListener {
             }
 
             //If lengths are ok, code inside "else"
-            else {
-                System.out.println("username: " + username);
-                System.out.println("password: " + username);
+            else{
+                //Add query to check if user exists in DB
 
-                PreparedStatement ps;
-                ResultSet rs;
-                String uname = usernameInput.getText();
-                String pass = passwordInput.getText();
-
-                String query = "SELECT * FROM `users` WHERE `username` =? AND `password` =?";
-
-
-
-
+                MechanicGUI mechanicGUI = new MechanicGUI(username);
+                frame.setVisible(false);
             }
         }
+
     }
 }
