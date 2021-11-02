@@ -7,8 +7,6 @@ import java.util.ArrayList;
 public class Main {
     public static void main(String[] args) {
 
-        ArrayList<Masini> arrayList_masini = new ArrayList<>();
-
         FirstThread firstThread = new FirstThread();
         SecondThread secondThread = new SecondThread();
 
@@ -16,5 +14,6 @@ public class Main {
         Thread thread2 = new Thread(secondThread);
 
         Welcome welcomeFrame = new Welcome("Login");
+
     }
 }
