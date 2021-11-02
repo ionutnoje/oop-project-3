@@ -9,14 +9,11 @@ import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 public class Welcome implements ActionListener {
+
+    JFrame frame = new JFrame();
+
 
     private final int WIDTH = 350;
     private final int HEIGHT = 550;
@@ -39,6 +36,7 @@ public class Welcome implements ActionListener {
     JTextField usernameInput = new JTextField();
     JTextField passwordInput = new JTextField();
 
+
     //Empty Constructor
     public Welcome() {
 
@@ -46,9 +44,6 @@ public class Welcome implements ActionListener {
 
     //Main Constructor
     public Welcome(String title) {
-
-        JFrame frame = new JFrame();
-
         //GUI Icon
         URL url = null;
         try {
@@ -129,6 +124,7 @@ public class Welcome implements ActionListener {
         frame.setVisible(true);
     }
 
+
     //When Submit button is pressed
     @Override
     public void actionPerformed(ActionEvent e) {
@@ -142,25 +138,13 @@ public class Welcome implements ActionListener {
             }
 
             //If lengths are ok, code inside "else"
-            else {
-                try {
-                    if (usernameInput != null && passwordInput != null) {
-                        String sql = "Select * from users_table Where username='" + username + "' and password='" + password + "'";
-                        Statement stmt = connection.createStatement();
-                        ResultSet rs = stmt.executeQuery(sql);
-                        if (rs.next()) {
-                            //in this case enter when at least one result comes it means user is valid
-                        } else {
-                            //in this case enter when  result size is zero  it means user is invalid
-                        }
-                    }
+            else{
+                //Add query to check if user exists in DB
 
-                    // You can also validate user by result size if its comes zero user is invalid else user is valid
-
-                } catch (SQLException err) {
-                    JOptionPane.showMessageDialog(this, err.getMessage());
-                }
+                MechanicGUI mechanicGUI = new MechanicGUI(username);
+                frame.setVisible(false);
             }
         }
+
     }
 }

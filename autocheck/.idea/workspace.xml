@@ -33,6 +33,14 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="recentNewPullRequestHead">
+      <RepoCoordinatesHolder>
+        <option name="owner" value="ionutnoje" />
+        <option name="repository" value="oop-project-3" />
+      </RepoCoordinatesHolder>
+    </option>
+  </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/src/Classes/Main.java" root0="FORCE_HIGHLIGHTING" />
   </component>
