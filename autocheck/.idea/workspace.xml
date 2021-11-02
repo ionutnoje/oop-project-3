@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="95b1878a-61a7-4edf-b211-ec7a7b73a158" name="Changes" comment="thread test">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/autocheck/Classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/autocheck/Classes/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/autocheck/GUI/Welcome.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/autocheck/GUI/Welcome.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/autocheck/net/codejava/JavaMySQL.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/autocheck/net/codejava/JavaMySQL.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Classes/ArrayLists.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Classes/ArrayLists.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Classes/FirstThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Classes/FirstThread.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Classes/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Classes/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/Welcome.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/Welcome.java" afterDir="false" />
-    </list>
+    <list default="true" id="95b1878a-61a7-4edf-b211-ec7a7b73a158" name="Changes" comment="verificare utilizator si parola din bd" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -166,7 +157,21 @@
       <option name="project" value="LOCAL" />
       <updated>1635871923697</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="verificare utilizator si parola din bd">
+      <created>1635874861453</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1635874861453</updated>
+    </task>
+    <task id="LOCAL-00012" summary="verificare utilizator si parola din bd">
+      <created>1635874869147</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1635874869147</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -187,6 +192,7 @@
     <MESSAGE value="created class Masini" />
     <MESSAGE value="created threads" />
     <MESSAGE value="thread test" />
-    <option name="LAST_COMMIT_MESSAGE" value="thread test" />
+    <MESSAGE value="verificare utilizator si parola din bd" />
+    <option name="LAST_COMMIT_MESSAGE" value="verificare utilizator si parola din bd" />
   </component>
 </project>

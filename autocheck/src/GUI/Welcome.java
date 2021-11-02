@@ -148,12 +148,12 @@ public class Welcome implements ActionListener {
                 PreparedStatement ps;
                 ResultSet rs;
                 String uname = usernameInput.getText();
-                String pass = String.valueOf(passwordInput.getPassword());
+                String pass = passwordInput.getText();
 
                 String query = "SELECT * FROM `the_app_users` WHERE `u_uname` =? AND `u_pass` =?";
 
                 try {
-                    ps = MyConnection.getConnection().prepareStatement(query);
+                    ps = Welcome.getConnection().prepareStatement(query);
 
                     ps.setString(1, uname);
                     ps.setString(2, pass);
