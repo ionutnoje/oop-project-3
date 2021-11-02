@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="95b1878a-61a7-4edf-b211-ec7a7b73a158" name="Changes" comment="verificare utilizator si parola din bd" />
+    <list default="true" id="95b1878a-61a7-4edf-b211-ec7a7b73a158" name="Changes" comment="verificare utilizator si parola din bd">
+      <change beforePath="$PROJECT_DIR$/out/production/autocheck/Classes/ArrayLists.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/autocheck/Classes/Cars.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/autocheck/Classes/FirstThread.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/autocheck/Classes/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/autocheck/GUI/MechanicGUI.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/autocheck/GUI/Welcome.class" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
