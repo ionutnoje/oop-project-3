@@ -134,8 +134,8 @@ public class Welcome implements ActionListener {
             password = passwordInput.getText();
 
 
-            String username_l="SELECT username FROM users WHERE username Like 'this.username'";
-            //String username_l="SELECT username FROM users WHERE username Like this.username";
+            String username_l="SELECT username FROM users WHERE username LIKE 'this.username'";
+            //String username_l="SELECT username FROM users WHERE username LIKE this.username";
 
             Welcome login=new Welcome();
             if (login.username==username_l)
