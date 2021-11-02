@@ -1,12 +1,12 @@
 package Classes;
 
+import GUI.Welcome;
+
 public class Main {
     public static void main(String[] args) {
-        System.out.println("test");
 
-        System.out.println("Hello there!!!!");
+        Welcome welcomeFrame = new Welcome("Login");
 
-        int x = 3;
 
     }
 }
