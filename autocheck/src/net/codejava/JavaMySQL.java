@@ -10,8 +10,10 @@ public class JavaMySQL {
         String password="root";
 
         try {
-            Connection connection= DriverManager.getConnection(url,username,password);
+            Connection connection= DriverManager.getConnection(url, username, password);
             System.out.println("Database connected successfully...");
+
+            //DB operations
 
             String sql="INSERT INTO Users (username,password) VALUES (?,?)";
             PreparedStatement statement=connection.prepareStatement(sql);
@@ -22,6 +24,7 @@ public class JavaMySQL {
 
             statement.close();
             connection.close();
+
 
         }catch (SQLException e){
             System.out.println("Eroare...");
