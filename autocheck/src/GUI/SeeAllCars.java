@@ -11,7 +11,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 
 
-public class Welcome implements ActionListener {
+public class SeeAllCars implements ActionListener {
 
     JFrame frame = new JFrame();
 
@@ -19,8 +19,7 @@ public class Welcome implements ActionListener {
     private final int WIDTH = 350;
     private final int HEIGHT = 550;
 
-    public String username;
-    public String password;
+    public String title = "See cars";
 
     Font fontBig = new Font("Eras Bold ITC", Font.BOLD, 28);
     Font fontNormal = new Font("Eras Bold ITC", Font.PLAIN, 20);
@@ -39,12 +38,12 @@ public class Welcome implements ActionListener {
 
 
     //Empty Constructor
-    public Welcome() {
+    public SeeAllCars() {
 
     }
 
     //Main Constructor
-    public Welcome(String title) {
+    public SeeAllCars(String username) {
         //GUI Icon
         URL url = null;
         try {
@@ -130,9 +129,6 @@ public class Welcome implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == submitButton) {
-            username = usernameInput.getText();
-            password = passwordInput.getText();
-
 
             String username_l="SELECT username FROM users WHERE username LIKE 'this.username'";
             //String username_l="SELECT username FROM users WHERE username LIKE this.username";
@@ -141,17 +137,7 @@ public class Welcome implements ActionListener {
 
 
             //Check lengths
-            if ((username.length() < 3 || username.length() > 16) && (password.length() < 3 || password.length() > 16)) {
-                System.out.println("Problema.");
-            }
 
-            //If lengths are ok, code inside "else"
-            else{
-                //Add query to check if user exists in DB
-                //MechanicGUI mechanicGUI = new MechanicGUI(username);
-                ClientGUI clientGUI = new ClientGUI(username);
-                frame.setVisible(false);
-            }
         }
 
     }
