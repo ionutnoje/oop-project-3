@@ -15,9 +15,6 @@ public class Main {
         Thread thread1 = new Thread(firstThread);
         Thread thread2 = new Thread(secondThread);
 
-
-
-
         Welcome welcomeFrame = new Welcome("Login");
     }
 }
