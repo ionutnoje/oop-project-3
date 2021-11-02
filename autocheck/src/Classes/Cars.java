@@ -2,7 +2,7 @@ package Classes;
 
 import java.util.ArrayList;
 
-public class Masini {
+public class Cars {
 
     private int _carId;
     private String _model;
@@ -10,12 +10,12 @@ public class Masini {
     private int _status;
     private int _customerId;
 
-    public Masini()
+    public Cars()
     {
 
     }
 
-    public Masini(int _carId, String _model, String _problem, int _status, int _customerId)
+    public Cars(int _carId, String _model, String _problem, int _status, int _customerId)
     {
         this._carId = _carId;
         this._customerId = _customerId;
