@@ -12,6 +12,9 @@ import java.net.URL;
 
 public class Welcome implements ActionListener {
 
+    JFrame frame = new JFrame();
+
+
     private final int WIDTH = 350;
     private final int HEIGHT = 550;
 
@@ -41,9 +44,6 @@ public class Welcome implements ActionListener {
 
     //Main Constructor
     public Welcome(String title) {
-
-        JFrame frame = new JFrame();
-
         //GUI Icon
         URL url = null;
         try {
@@ -139,8 +139,10 @@ public class Welcome implements ActionListener {
 
             //If lengths are ok, code inside "else"
             else{
-                System.out.println("username: " + username);
-                System.out.println("password: " + username);
+                //Add query to check if user exists in DB
+
+                MechanicGUI mechanicGUI = new MechanicGUI(username);
+                frame.setVisible(false);
             }
         }
 
