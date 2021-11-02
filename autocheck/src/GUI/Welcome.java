@@ -9,6 +9,9 @@ import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 
 public class Welcome implements ActionListener {
 
@@ -143,6 +146,24 @@ public class Welcome implements ActionListener {
 
                 MechanicGUI mechanicGUI = new MechanicGUI(username);
                 frame.setVisible(false);
+
+                try {
+                    if (username != null && password != null) {
+                        String sql = "Select * from users_table Where username='" + username + "' and password='" + password + "'";
+                        Statement stmt = connection.createStatement();
+                        ResultSet rs = stmt.executeQuery(sql);
+                        if (rs.next()) {
+                            //in this case enter when at least one result comes it means user is valid
+                        } else {
+                            //in this case enter when  result size is zero  it means user is invalid
+                        }
+                    }
+
+                    // You can also validate user by result size if its comes zero user is invalid else user is valid
+
+                } catch (SQLException err) {
+                    JOptionPane.showMessageDialog(this, err.getMessage());
+                }
             }
         }
 
