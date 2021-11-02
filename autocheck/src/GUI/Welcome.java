@@ -2,6 +2,7 @@ package GUI;
 
 import Classes.ArrayLists;
 import Classes.Masini;
+import net.codejava.JavaMySQL;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
@@ -12,12 +13,12 @@ import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 
 public class Welcome implements ActionListener {
+
+    Connection MyConnection;
+    JavaMySQL javaMySQL = new JavaMySQL();
 
     private final int WIDTH = 350;
     private final int HEIGHT = 550;
@@ -151,36 +152,13 @@ public class Welcome implements ActionListener {
                 PreparedStatement ps;
                 ResultSet rs;
                 String uname = usernameInput.getText();
-                String pass = String.valueOf(passwordInput.getPassword());
+                String pass = passwordInput.getText();
 
-                String query = "SELECT * FROM `the_app_users` WHERE `u_uname` =? AND `u_pass` =?";
+                String query = "SELECT * FROM `users` WHERE `username` =? AND `password` =?";
 
-                try {
-                    ps = MyConnection.getConnection().prepareStatement(query);
 
-                    ps.setString(1, uname);
-                    ps.setString(2, pass);
 
-                    rs = ps.executeQuery();
 
-                    if(rs.next())
-                    {
-                        HOME_JFrame mf = new HOME_JFrame();
-                        mf.setVisible(true);
-                        mf.pack();
-                        mf.setLocationRelativeTo(null);
-                        mf.setExtendedState(JFrame.MAXIMIZED_BOTH);
-                        mf.jLabel1.setText("Welcome < "+uname+" >");
-
-                        this.dispose();
-                    }
-                    else{
-                        JOptionPane.showMessageDialog(null, "Incorrect Username Or Password", "Login Failed", 2);
-                    }
-
-                } catch (SQLException ex) {
-                    Logger.getLogger(LoginForm.class.getName()).log(Level.SEVERE, null, ex);
-                }
             }
         }
     }
