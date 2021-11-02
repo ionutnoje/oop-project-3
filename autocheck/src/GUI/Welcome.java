@@ -10,6 +10,7 @@ import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
 
+
 public class Welcome implements ActionListener {
 
     JFrame frame = new JFrame();
@@ -131,6 +132,13 @@ public class Welcome implements ActionListener {
         if (e.getSource() == submitButton) {
             username = usernameInput.getText();
             password = passwordInput.getText();
+
+
+            String username_l="SELECT username FROM users WHERE username LIKE 'this.username'";
+            //String username_l="SELECT username FROM users WHERE username LIKE this.username";
+
+            Welcome login=new Welcome();
+            if (login.username==username_l)
 
             //Check lengths
             if ((username.length() < 3 || username.length() > 16) && (password.length() < 3 || password.length() > 16)) {
