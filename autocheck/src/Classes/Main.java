@@ -9,6 +9,12 @@ public class Main {
 
         ArrayList<Masini> arrayList_masini = new ArrayList<>();
 
+        FirstThread firstThread = new FirstThread();
+        SecondThread secondThread = new SecondThread();
+
+        Thread thread1 = new Thread(firstThread);
+        Thread thread2 = new Thread(secondThread);
+
 
 
 
