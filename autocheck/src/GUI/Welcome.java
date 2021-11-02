@@ -1,5 +1,8 @@
 package GUI;
 
+import Classes.ArrayLists;
+import Classes.Masini;
+
 import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
