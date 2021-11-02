@@ -1,4 +1,6 @@
 package net.codejava;
+import Classes.FirstThread;
+import Classes.SecondThread;
 import GUI.Welcome;
 
 import java.sql.*;
@@ -11,8 +13,12 @@ public class JavaMySQL {
         String username="root";
         String password="root";
 
+        FirstThread firstThread=new FirstThread();
+        SecondThread secondThread=new SecondThread();
 
-        try {
+
+
+       try {
 
             //connecting database
             Connection connection= DriverManager.getConnection(url, username, password);

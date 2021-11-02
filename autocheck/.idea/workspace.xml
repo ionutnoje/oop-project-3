@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="95b1878a-61a7-4edf-b211-ec7a7b73a158" name="Changes" comment="finished front-end">
-      <change afterPath="$PROJECT_DIR$/src/GUI/ClientGUI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/GUI/SeeAllCars.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Classes/Connections.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/Welcome.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/Welcome.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Classes/FirstThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Classes/FirstThread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DB/Structure.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/DB/Structure.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/net/codejava/JavaMySQL.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/codejava/JavaMySQL.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
