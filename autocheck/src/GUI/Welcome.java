@@ -10,7 +10,9 @@ import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-public class Welcome implements ActionListener {
+
+
+public class Welcome implements ActionListener{
 
     JFrame frame = new JFrame();
 
@@ -132,18 +134,25 @@ public class Welcome implements ActionListener {
             username = usernameInput.getText();
             password = passwordInput.getText();
 
-            //Check lengths
-            if ((username.length() < 3 || username.length() > 16) && (password.length() < 3 || password.length() > 16)) {
-                System.out.println("Problema.");
-            }
 
-            //If lengths are ok, code inside "else"
-            else{
-                //Add query to check if user exists in DB
+            String username_l="SELECT username FROM users WHERE username LIKE 'this.username'";
+            //String username_l="SELECT username FROM users WHERE username LIKE this.username";
 
-                MechanicGUI mechanicGUI = new MechanicGUI(username);
-                frame.setVisible(false);
-            }
+            Welcome login=new Welcome();
+            if (login.username==username_l)
+
+                //Check lengths
+                if ((username.length() < 3 || username.length() > 16) && (password.length() < 3 || password.length() > 16)) {
+                    System.out.println("Problema.");
+                }
+
+                //If lengths are ok, code inside "else"
+                else{
+                    //Add query to check if user exists in DB
+
+                    MechanicGUI mechanicGUI = new MechanicGUI(username);
+                    frame.setVisible(false);
+                }
         }
 
     }
