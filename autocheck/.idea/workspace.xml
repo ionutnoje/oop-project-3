@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="95b1878a-61a7-4edf-b211-ec7a7b73a158" name="Changes" comment="verificare utilizator si parola din bd" />
+    <list default="true" id="95b1878a-61a7-4edf-b211-ec7a7b73a158" name="Changes" comment="check username and password">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/Welcome.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/Welcome.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -171,7 +174,14 @@
       <option name="project" value="LOCAL" />
       <updated>1635874869147</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="check username and password">
+      <created>1635875203052</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1635875203052</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -193,6 +203,7 @@
     <MESSAGE value="created threads" />
     <MESSAGE value="thread test" />
     <MESSAGE value="verificare utilizator si parola din bd" />
-    <option name="LAST_COMMIT_MESSAGE" value="verificare utilizator si parola din bd" />
+    <MESSAGE value="check username and password" />
+    <option name="LAST_COMMIT_MESSAGE" value="check username and password" />
   </component>
 </project>

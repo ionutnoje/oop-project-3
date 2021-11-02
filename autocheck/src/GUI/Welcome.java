@@ -13,6 +13,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class Welcome implements ActionListener {
 
@@ -127,7 +129,6 @@ public class Welcome implements ActionListener {
         frame.setVisible(true);
     }
 
-
     //When Submit button is pressed
     @Override
     public void actionPerformed(ActionEvent e) {
@@ -142,41 +143,22 @@ public class Welcome implements ActionListener {
 
             //If lengths are ok, code inside "else"
             else {
-                System.out.println("username: " + username);
-                System.out.println("password: " + username);
-
-                PreparedStatement ps;
-                ResultSet rs;
-                String uname = usernameInput.getText();
-                String pass = passwordInput.getText();
-
-                String query = "SELECT * FROM `the_app_users` WHERE `u_uname` =? AND `u_pass` =?";
-
                 try {
-                    ps = Welcome.getConnection().prepareStatement(query);
-
-                    ps.setString(1, uname);
-                    ps.setString(2, pass);
-
-                    rs = ps.executeQuery();
-
-                    if(rs.next())
-                    {
-                        HOME_JFrame mf = new HOME_JFrame();
-                        mf.setVisible(true);
-                        mf.pack();
-                        mf.setLocationRelativeTo(null);
-                        mf.setExtendedState(JFrame.MAXIMIZED_BOTH);
-                        mf.jLabel1.setText("Welcome < "+uname+" >");
-
-                        this.dispose();
-                    }
-                    else{
-                        JOptionPane.showMessageDialog(null, "Incorrect Username Or Password", "Login Failed", 2);
+                    if (usernameInput != null && passwordInput != null) {
+                        String sql = "Select * from users_table Where username='" + username + "' and password='" + password + "'";
+                        Statement stmt = connection.createStatement();
+                        ResultSet rs = stmt.executeQuery(sql);
+                        if (rs.next()) {
+                            //in this case enter when at least one result comes it means user is valid
+                        } else {
+                            //in this case enter when  result size is zero  it means user is invalid
+                        }
                     }
 
-                } catch (SQLException ex) {
-                    Logger.getLogger(LoginForm.class.getName()).log(Level.SEVERE, null, ex);
+                    // You can also validate user by result size if its comes zero user is invalid else user is valid
+
+                } catch (SQLException err) {
+                    JOptionPane.showMessageDialog(this, err.getMessage());
                 }
             }
         }
