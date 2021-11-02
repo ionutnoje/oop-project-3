@@ -10,6 +10,22 @@ public class Masini {
     private int _status;
     private int _customerId;
 
+    public Masini()
+    {
+
+    }
+
+    public Masini(int _carId, String _model, String _problem, int _status, int _customerId)
+    {
+        this._carId = _carId;
+        this._customerId = _customerId;
+        this._problem = _problem;
+        this._model = _model;
+        this._status = _status;
+
+    }
+
+
     void set_carId(int carId){
         this._carId = carId;
     }

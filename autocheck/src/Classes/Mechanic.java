@@ -7,6 +7,13 @@ public class Mechanic {
     private String password;
     private boolean ismechanic;
 
+
+    public Mechanic()
+    {
+
+    }
+
+
     public Mechanic(int userid,String username,String password,boolean ismechanic)
     {
         this.ismechanic = ismechanic;

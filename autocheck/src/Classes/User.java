@@ -7,6 +7,12 @@ public class User {
     private String password;
     private boolean ismechanic;
 
+    public User()
+    {
+
+    }
+
+
     public User(int userid,String username,String password,boolean ismechanic)
     {
      this.ismechanic = ismechanic;
