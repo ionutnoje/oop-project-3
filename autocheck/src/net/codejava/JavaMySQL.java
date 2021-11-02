@@ -13,6 +13,7 @@ public class JavaMySQL {
             Connection connection= DriverManager.getConnection(url, username, password);
             System.out.println("Database connected successfully...");
 
+
             //DB operations
 
             String sql="INSERT INTO Users (username,password) VALUES (?,?)";
