@@ -8,6 +8,10 @@ import java.sql.*;
 
 public class JavaMySQL {
     public static void main(String[] args){
+
+        String[] username_vector = new String[100];
+        String[] passwords_vector = new String[100];
+
         String schema = "test";
         String url = "jdbc:mysql://localhost:3306/autocheck";
         String username="root";
