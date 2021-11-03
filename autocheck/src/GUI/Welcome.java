@@ -1,5 +1,6 @@
 package GUI;
 
+import Classes.Mechanic;
 import net.codejava.JavaMySQL;
 
 import javax.imageio.ImageIO;
@@ -136,26 +137,24 @@ public class Welcome implements ActionListener {
             username = usernameInput.getText();
             password = passwordInput.getText();
 
-
-
-
-
-
             //Check lengths
             for(int i = 0; i < JavaMySQL.username_vector.length;i++)
             {
-                if(username == JavaMySQL.username_vector[i])
+                if(username.equals(JavaMySQL.username_vector[i]))
                 {
-
-                    if(password == JavaMySQL.passwords_vector[i])
+                    //System.out.println("username good");
+                    if(password.equals(JavaMySQL.passwords_vector[i]))
                     {
+                     //   System.out.println("pw good");
+
                         if(JavaMySQL.mechanic_status[i] == 0)
                         {
-                            System.out.println("e user");
+                            ClientGUI clientGUI = new ClientGUI(username);
+
                         }
                         else
                         {
-                            System.out.println("e mecanic");
+                            MechanicGUI mechanicGUI = new MechanicGUI(username);
                         }
                     }
                 }

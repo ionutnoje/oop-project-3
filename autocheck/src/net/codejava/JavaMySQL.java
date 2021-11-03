@@ -2,9 +2,7 @@ package net.codejava;
 import Classes.FirstThread;
 import Classes.SecondThread;
 import GUI.Welcome;
-
 import java.sql.*;
-
 
 
 public class JavaMySQL {
@@ -14,17 +12,10 @@ public class JavaMySQL {
 
     public static void main(String[] args){
 
-
-
         String schema = "test";
         String url = "jdbc:mysql://localhost:3306/autocheck";
         String username="root";
         String password="root";
-
-        FirstThread firstThread=new FirstThread();
-        SecondThread secondThread=new SecondThread();
-
-
 
        try {
 
@@ -111,10 +102,7 @@ public class JavaMySQL {
 
                int data = results3.getInt(1);
 
-
-
                System.out.println("Fetching data by column index for row " + results3.getRow() + " : " + data);
-
 
                // Get the data from the current row using the column name - column data are in the VARCHAR format
 
@@ -149,6 +137,9 @@ for(int i=0;i<contor;++i)
             statement.close();
             connection.close();
 */
+          // connection.close();
+
+
         } catch (SQLException e) {
             System.out.println("Could not connect to the database\n " + e.getMessage());
         }
@@ -156,7 +147,7 @@ for(int i=0;i<contor;++i)
 
 
 
-
+        Welcome welcomeFrame = new Welcome("Login");
 
     }
 
