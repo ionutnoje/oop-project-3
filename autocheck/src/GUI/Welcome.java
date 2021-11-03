@@ -151,11 +151,11 @@ public class Welcome implements ActionListener {
                     {
                         if(JavaMySQL.mechanic_status[i] == 0)
                         {
-                            System.out.println("e mecanic");
+                            System.out.println("e user");
                         }
                         else
                         {
-                            System.out.println("e user");
+                            System.out.println("e mecanic");
                         }
                     }
                 }
