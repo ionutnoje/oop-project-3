@@ -9,12 +9,9 @@ import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
 
 
-public class Welcome implements ActionListener {
+public class SeeAllCars implements ActionListener {
 
     JFrame frame = new JFrame();
 
@@ -22,8 +19,7 @@ public class Welcome implements ActionListener {
     private final int WIDTH = 350;
     private final int HEIGHT = 550;
 
-    public String username;
-    public String password;
+    public String title = "See cars";
 
     Font fontBig = new Font("Eras Bold ITC", Font.BOLD, 28);
     Font fontNormal = new Font("Eras Bold ITC", Font.PLAIN, 20);
@@ -42,12 +38,12 @@ public class Welcome implements ActionListener {
 
 
     //Empty Constructor
-    public Welcome() {
+    public SeeAllCars() {
 
     }
 
     //Main Constructor
-    public Welcome(String title) {
+    public SeeAllCars(String username) {
         //GUI Icon
         URL url = null;
         try {
@@ -133,9 +129,6 @@ public class Welcome implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == submitButton) {
-            username = usernameInput.getText();
-            password = passwordInput.getText();
-
 
             String username_l="SELECT username FROM users WHERE username LIKE 'this.username'";
             //String username_l="SELECT username FROM users WHERE username LIKE this.username";
@@ -144,37 +137,8 @@ public class Welcome implements ActionListener {
 
 
             //Check lengths
-            if ((username.length() < 3 || username.length() > 16) && (password.length() < 3 || password.length() > 16)) {
-                System.out.println("Problema.");
-            }
 
-            //If lengths are ok, code inside "else"
-            else{
-                //Add query to check if user exists in DB
-                //MechanicGUI mechanicGUI = new MechanicGUI(username);
-                ClientGUI clientGUI = new ClientGUI(username);
-                frame.setVisible(false);
-/*
-                try {
-                    if (username != null && password != null) {
-                        String sql = "Select * from users_table Where username='" + username + "' and password='" + password + "'";
-                        Statement stmt = connection.createStatement();
-                        ResultSet rs = stmt.executeQuery(sql);
-                        if (rs.next()) {
-                            //in this case enter when at least one result comes it means user is valid
-                        } else {
-                            //in this case enter when  result size is zero  it means user is invalid
-                        }
-                    }
-
-                    // You can also validate user by result size if its comes zero user is invalid else user is valid
-
-                } catch (SQLException err) {
-                    JOptionPane.showMessageDialog(this, err.getMessage());
-                }
-                */
-
-            }
         }
+
     }
 }
