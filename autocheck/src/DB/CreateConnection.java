@@ -6,7 +6,7 @@ public class CreateConnection {
 
     // Class 1
 // Helper class
-    class Singleton {
+    static class Singleton {
         // Static variable reference of single_instance
         // of type Singleton
         private static Singleton single_instance = null;
@@ -24,6 +24,17 @@ public class CreateConnection {
 
         // Static method
         // Static method to create instance of Singleton class
+        public static Singleton getInstance()
+        {
+            if (single_instance == null)
+            {
+                single_instance = new Singleton();
+            }
+
+
+            return single_instance;
+        }
 
     }
+
 }
