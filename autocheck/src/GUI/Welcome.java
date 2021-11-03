@@ -146,7 +146,7 @@ public class Welcome implements ActionListener {
 
                 MechanicGUI mechanicGUI = new MechanicGUI(username);
                 frame.setVisible(false);
-
+/*
                 try {
                     if (username != null && password != null) {
                         String sql = "Select * from users_table Where username='" + username + "' and password='" + password + "'";
@@ -164,8 +164,9 @@ public class Welcome implements ActionListener {
                 } catch (SQLException err) {
                     JOptionPane.showMessageDialog(this, err.getMessage());
                 }
+                */
+
             }
         }
-
     }
 }

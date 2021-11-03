@@ -25,13 +25,9 @@ public class JavaMySQL {
             statement.close();
             connection.close();
 
-
         }catch (SQLException e){
             System.out.println("Eroare...");
             e.printStackTrace();
         }
-
-
-
     }
 }
