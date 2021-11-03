@@ -8,8 +8,6 @@ Database's structure"
 | users               |
 +---------------------+
 
-
-
 First table of DB: Users
 +------------+-------------+------+-----+---------+----------------+
 | Field      | Type        | Null | Key | Default | Extra          |
@@ -30,3 +28,12 @@ Second table of DB: Cars
 | status     | int          | YES  |     | NULL    |                |
 | customerid | int          | YES  | MUL | NULL    |                |
 +------------+--------------+------+-----+---------+----------------+
+
++--------+----------+----------+------------+
+| userid | username | password | ismechanic |
++--------+----------+----------+------------+
+|      1 | admin    | admin    |          1 |
+|      2 | user1    | user1    |          0 |
+|      3 | user2    | user2    |          0 |
+|      4 | user3    | user3    |          0 |
++--------+----------+----------+------------+
