@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="95b1878a-61a7-4edf-b211-ec7a7b73a158" name="Changes" comment="added username query and password query to db">
+    <list default="true" id="95b1878a-61a7-4edf-b211-ec7a7b73a158" name="Changes" comment="Fixed username and password queries for later use in class Welcome.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/autocheck/DB/Structure.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/autocheck/DB/Structure.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/autocheck/net/codejava/JavaMySQL.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/autocheck/net/codejava/JavaMySQL.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/net/codejava/JavaMySQL.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/codejava/JavaMySQL.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -205,7 +202,21 @@
       <option name="project" value="LOCAL" />
       <updated>1635927704280</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Fixed username and password queries for later use in class Welcome.">
+      <created>1635928549091</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1635928549091</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Fixed username and password queries for later use in class Welcome.">
+      <created>1635928566390</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1635928566390</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -229,6 +240,7 @@
     <MESSAGE value="verificare utilizator si parola din bd" />
     <MESSAGE value="finished front-end" />
     <MESSAGE value="added username query and password query to db" />
-    <option name="LAST_COMMIT_MESSAGE" value="added username query and password query to db" />
+    <MESSAGE value="Fixed username and password queries for later use in class Welcome." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed username and password queries for later use in class Welcome." />
   </component>
 </project>
