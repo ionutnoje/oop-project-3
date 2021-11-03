@@ -36,12 +36,17 @@ public class JavaMySQL {
 
             Statement statement = connection.createStatement();
             ResultSet results = statement.executeQuery("SELECT username FROM users");
+
+            int contor = 0;
             while (results.next()) {
+
 
 
                 // Get the data from the current row using the column index - column data are in the VARCHAR format
 
                 String data = results.getString(1);
+
+                username_vector[contor] = data;
 
                 System.out.println("Fetching data by column index for row " + results.getRow() + " : " + data);
 
@@ -51,6 +56,8 @@ public class JavaMySQL {
                 data = results.getString("username");
 
                 System.out.println("Fetching data by column name for row " + results.getRow() + " : " + data);
+
+                contor++;
             }
 
 
