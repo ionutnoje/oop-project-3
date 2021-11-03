@@ -16,6 +16,8 @@ public class JavaMySQL {
         FirstThread firstThread=new FirstThread();
         SecondThread secondThread=new SecondThread();
 
+        Welcome wl=new Welcome();
+
 
 
        try {
@@ -47,6 +49,7 @@ public class JavaMySQL {
                 data = results.getString("username");
 
                 System.out.println("Fetching data by column name for row " + results.getRow() + " : " + data);
+
             }
 
 
@@ -58,23 +61,6 @@ public class JavaMySQL {
 
 
 
-            ResultSet results2 = statement.executeQuery("SELECT password FROM users");
-            while (results2.next()) {
-
-
-                // Get the data from the current row using the column index - column data are in the VARCHAR format
-
-                String data = results2.getString(1);
-
-                System.out.println("Fetching data by column index for row " + results2.getRow() + " : " + data);
-
-
-                // Get the data from the current row using the column name - column data are in the VARCHAR format
-
-                data = results2.getString("password");
-
-                System.out.println("Fetching data by column name for row " + results2.getRow() + " : " + data);
-            }
 
 
 

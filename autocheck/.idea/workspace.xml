@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="95b1878a-61a7-4edf-b211-ec7a7b73a158" name="Changes" comment="finished front-end">
+    <list default="true" id="95b1878a-61a7-4edf-b211-ec7a7b73a158" name="Changes" comment="added username query and password query to db">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Classes/FirstThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Classes/FirstThread.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DB/Structure.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/DB/Structure.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/net/codejava/JavaMySQL.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/net/codejava/JavaMySQL.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -57,7 +55,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="Application.JavaMySQL">
     <configuration name="JavaMySQL" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="net.codejava.JavaMySQL" />
       <module name="autocheck" />
@@ -86,8 +84,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
         <item itemvalue="Application.JavaMySQL" />
+        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -191,7 +189,14 @@
       <option name="project" value="LOCAL" />
       <updated>1635888277501</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="added username query and password query to db">
+      <created>1635892903951</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1635892903951</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -214,6 +219,7 @@
     <MESSAGE value="thread test" />
     <MESSAGE value="verificare utilizator si parola din bd" />
     <MESSAGE value="finished front-end" />
-    <option name="LAST_COMMIT_MESSAGE" value="finished front-end" />
+    <MESSAGE value="added username query and password query to db" />
+    <option name="LAST_COMMIT_MESSAGE" value="added username query and password query to db" />
   </component>
 </project>
