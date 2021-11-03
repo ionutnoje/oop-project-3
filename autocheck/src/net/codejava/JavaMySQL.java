@@ -9,8 +9,8 @@ import java.sql.*;
 public class JavaMySQL {
     public static void main(String[] args){
 
-        String[] username_vector = new String[100];
-        String[] passwords_vector = new String[100];
+        String[] username_vector = new String[101];
+        String[] passwords_vector = new String[101];
 
         String schema = "test";
         String url = "jdbc:mysql://localhost:3306/autocheck";
@@ -46,7 +46,7 @@ public class JavaMySQL {
 
                 String data = results.getString(1);
 
-                username_vector[contor] = data;
+
 
                 System.out.println("Fetching data by column index for row " + results.getRow() + " : " + data);
 
@@ -56,7 +56,7 @@ public class JavaMySQL {
                 data = results.getString("username");
 
                 System.out.println("Fetching data by column name for row " + results.getRow() + " : " + data);
-
+                username_vector[contor] = data;
                 contor++;
             }
 
@@ -70,25 +70,37 @@ public class JavaMySQL {
 
 
             ResultSet results2 = statement.executeQuery("SELECT password FROM users");
-            while (results2.next()) {
-
-
-                // Get the data from the current row using the column index - column data are in the VARCHAR format
-
-                String data = results2.getString(1);
-
-                System.out.println("Fetching data by column index for row " + results2.getRow() + " : " + data);
-
-
-                // Get the data from the current row using the column name - column data are in the VARCHAR format
-
-                data = results2.getString("password");
-
-                System.out.println("Fetching data by column name for row " + results2.getRow() + " : " + data);
-            }
+           int contor2 = 0;
+           while (results2.next()) {
 
 
 
+               // Get the data from the current row using the column index - column data are in the VARCHAR format
+
+               String data = results2.getString(1);
+
+
+
+               System.out.println("Fetching data by column index for row " + results2.getRow() + " : " + data);
+
+
+               // Get the data from the current row using the column name - column data are in the VARCHAR format
+
+               data = results2.getString("password");
+
+               System.out.println("Fetching data by column name for row " + results2.getRow() + " : " + data);
+               passwords_vector[contor2] = data;
+               contor2++;
+           }
+for(int i=0;i<contor;++i)
+{
+    System.out.println(username_vector[i]);
+}
+           System.out.println("\n");
+
+           for(int j=0;j<contor;++j) {
+               System.out.println(passwords_vector[j]);
+           }
 /*
             String query ="SELECT * FROM users;";
             PreparedStatement statement=connection.prepareStatement(query);
