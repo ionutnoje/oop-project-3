@@ -1,5 +1,7 @@
 package GUI;
 
+import net.codejava.JavaMySQL;
+
 import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
@@ -14,6 +16,7 @@ import java.net.URL;
 public class Welcome implements ActionListener {
 
     JFrame frame = new JFrame();
+    JavaMySQL javaMySQL = new JavaMySQL();
 
 
     private final int WIDTH = 350;
@@ -134,24 +137,36 @@ public class Welcome implements ActionListener {
             password = passwordInput.getText();
 
 
-            String username_l="SELECT username FROM users WHERE username LIKE 'this.username'";
-            //String username_l="SELECT username FROM users WHERE username LIKE this.username";
 
-//            Welcome login=new Welcome();
+
 
 
             //Check lengths
-            if ((username.length() < 3 || username.length() > 16) && (password.length() < 3 || password.length() > 16)) {
-                System.out.println("Problema.");
+            for(int i = 0; i < JavaMySQL.username_vector.length;i++)
+            {
+                if(username == JavaMySQL.username_vector[i])
+                {
+
+                    if(password == JavaMySQL.passwords_vector[i])
+                    {
+                        if(JavaMySQL.mechanic_status[i] == 0)
+                        {
+                            System.out.println("e mecanic");
+                        }
+                        else
+                        {
+                            System.out.println("e user");
+                        }
+                    }
+                }
+
             }
 
             //If lengths are ok, code inside "else"
-            else{
-                //Add query to check if user exists in DB
-                //MechanicGUI mechanicGUI = new MechanicGUI(username);
-                ClientGUI clientGUI = new ClientGUI(username);
-                frame.setVisible(false);
-            }
+//            else{
+//                //Add query to check if user exists in DB
+//                frame.setVisible(false);
+//            }
         }
 
     }
